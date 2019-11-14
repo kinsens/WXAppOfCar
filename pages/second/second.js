@@ -3,7 +3,7 @@ Page({
     src: ''
   },
   /**
-   * 打开本地视频test
+   * 打开本地视频
    */
   bindButtonTap: function () {
     var that = this
