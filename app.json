@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/second/second",
+    "pages/third/third"
+  ],
+ "window": {
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#36343C",
+  "navigationBarTitleText": "小象雨刷",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true
+},
+"tabBar": {
+  "color": "#8a8a8a",
+  "selectedColor": "#2c2c2c",
+  "borderStyle": "black",
+  "list": [
+    {
+      "selectedIconPath": "images/ico-home-active.png",
+      "iconPath": "images/ico-home.png",
+      "pagePath": "pages/index/index",
+      "text": "产品"
+    },
+            {
+              "selectedIconPath": "images/ico-category-active.png",
+              "iconPath": "images/ico-category.png",
+              "pagePath": "pages/second/second",
+              "text": "安装"
+            },
+    {
+      "selectedIconPath": "images/ico-uc-active.png",
+      "iconPath": "images/ico-uc.png",
+      "pagePath": "pages/third/third",
+      "text": "我的"
+    }
+  ]
+},
+  "sitemapLocation": "sitemap.json"
+}

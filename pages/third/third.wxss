@@ -1,0 +1,36 @@
+/**index.wxss**/
+
+.user {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px lightgrey solid;
+}
+.userinfo {
+   display: flex;
+  flex-direction: column; 
+  align-items: center;
+  width: 100%;
+  border-right: 1px dotted lightgrey;
+
+  background-color: clear
+}
+
+.userinfo-avatar {
+  width: 168rpx;
+  height: 168rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+.item {
+    background-color: #FFFFFF;
+    margin-top: 2px;
+    height:40px;
+    padding-top: 5px;
+    padding-left: 5px;
+    /* font-size: rpx; */
+    color: #616161;
+}

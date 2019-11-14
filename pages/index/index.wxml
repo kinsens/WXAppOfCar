@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<view class="container">
+  <image class="userinfo-avatar" src="../../images/top_banner2.jpg">
+  </image>
+  <view class="userinfo">
+    <view class="layout-item">
+      <view class="text-left">品牌：</view>
+      <view class='select_box'>
+        <view class='select' catchtap='onNameTap'>
+          <text class='select_text'>{{nameList[nameIndex]}}</text>
+          <image class='select_img {{selectNameShow&&"select_img_rotate"}}' src='../../images/down.png' background-size="contain"></image>
+        </view>
+        <view class='option_box' style='height:{{selectNameShow?(nameList.length>5?325:nameList.length*65):0}}rpx;'>
+          <text class='option' wx:for='{{nameList}}' wx:key='this' data-index='{{index}}' catchtap='optionNameTap'>{{item}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="layout-item">
+      <view class="text-left">车型：</view>
+      <view class='select_box'>
+        <view class='select' catchtap='onTypeTap'>
+          <text class='select_text'>{{typeList[typeIndex]}}</text>
+          <image class='select_img {{selectTypeShow&&"select_img_rotate"}}' src='../../images/down.png' background-size="contain"></image>
+        </view>
+        <view class='option_box' style='height:{{selectTypeShow?(typeList.length>5?325:typeList.length*65):0}}rpx;'>
+          <text class='option' wx:for='{{typeList}}' wx:key='this' data-index='{{index}}' catchtap='optionTypeTap'>{{item}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="layout-item">
+      <view class="text-left">年份：</view>
+      <view class='select_box'>
+        <view class='select' catchtap='onAgeTap'>
+          <text class='select_text'>{{ageList[ageIndex]}}</text>
+          <image class='select_img {{selectAgeShow&&"select_img_rotate"}}' src='../../images/down.png' background-size="contain"></image>
+        </view>
+        <view class='option_box' style='height:{{selectAgeShow?(ageList.length>5?325:ageList.length*65):0}}rpx;'>
+          <text class='option' wx:for='{{ageList}}' wx:key='this' data-index='{{index}}' catchtap='optionAgeTap'>{{item}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="result-title">查询结果</view>
+  <view class="result-part1">
+    <view class="part1-text">主驾</view>
+    <view class="part1-text">副驾</view>
+    <view class="part1-text">接口编号</view>
+    <view class="part1-text2">多功能卡扣</view>
+  </view>
+  <view class="result-part2">
+    <view class="part2-text">{{showResult.left}}</view>
+    <view class="part2-text">{{showResult.right}}</view>
+    <view class="part2-text">{{showResult.interfaceNumber}}</view>
+    <view class="part2-text2">{{showResult.MultiFunction}}</view>
+  </view>
+  <image class="result-img" mode='aspectFill' src="{{imageUrl}}" style='height:{{height}}'></image>
+</view>
