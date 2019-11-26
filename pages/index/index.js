@@ -113,6 +113,16 @@ Page({
       })
     }
   },
+  //转发
+  onShareAppMessage: function () {
+    let users = wx.getStorageSync('user');
+    if (res.from === 'button') { }
+    return {
+      title: '分享',
+      path: '/pages/index/index',
+      success: function (res) { }
+    }
+  },
   onShow:function(){
     // this.setShowResult();
     this.getNameList();
@@ -213,7 +223,7 @@ Page({
     query.select(".result-img").boundingClientRect(function (res) {
       console.log("result-image的长度" +res.width)
       that.setData({
-        height: res.width * 1.4 + 'px'
+        height: res.width * 1.6 + 'px'
       })
     }).exec()
   },

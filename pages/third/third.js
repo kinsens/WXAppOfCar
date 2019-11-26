@@ -59,6 +59,16 @@ Page({
     }
   },
 
+  //转发
+  onShareAppMessage: function () {
+    let users = wx.getStorageSync('user');
+    if (res.from === 'button') { }
+    return {
+      title: '分享',
+      path: '/pages/third/third',
+      success: function (res) { }
+    }
+  },
   onShow: function () {
 
   },
