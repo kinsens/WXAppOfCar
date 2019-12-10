@@ -10,7 +10,7 @@
   </view>
 
   <view class='item' wx:for="{{itemList}}" bindtap='getInfo' data-id="{{index}}">
-  <block wx:if="{{index==0}}"><label style='float:left;width:30%'>{{item}}</label><label style='margin-left:5%;text-align:right;'>2.0.0</label></block>
+  <block wx:if="{{index==0}}"><label style='float:left;width:30%'>{{item}}</label><label style='margin-left:5%;text-align:right;'>2.0.1</label></block>
   <block wx:elif="{{index==1}}"><label style='float:left;width:30%'>{{item}}</label><label style='margin-left:5%;text-align:right;'>0592-7291679</label></block>
     <block wx:elif="{{index==2}}"><label style='float:left;width:30%'>{{item}}</label><label style='text-align:right;margin-left:5%;'>厦门市同安区同安工业园</label></block>
   </view>

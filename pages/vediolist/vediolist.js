@@ -10,7 +10,7 @@ Page({
   },
   onLoad: function () {
     // this.downloadVedioInfofile;
-    // this.testGetRemoteData();
+    this.testGetRemoteData();
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -68,7 +68,7 @@ Page({
     }
   },
   onShow: function () {
-    this.getData();
+    // this.getData();
     // wx.hideShareMenu();
   },
   getUserInfo: function (e) {
@@ -83,21 +83,14 @@ Page({
       loadingHidden: false
     })
     let _that = this;
-     wx.downloadFile({
-       url:'http://vedio.vansy.cn/vedio_info.rtf',
+    wx.request({
+       url:'https://vedio.vansy.cn/vedio_info.json',
       success: function (res) {
-        var filePath = res.tempFilePath;
-        console.log(res)
-        //页面显示加载动画
-        wx.openDocument({
-          filePath: filePath,
-          success: function (res) {
-            _that.setData({
-              loadingHidden: true
-            })
-            console.log('打开文档成功')
-          }
+        _that.setData({
+          loadingHidden: true,
+          dataList: res.data.vedioListData
         })
+        console.log(res)
       }
     })
   },
@@ -121,7 +114,9 @@ Page({
             wx.openDocument({
               filePath: savedFilePath,
               success: function (res) {
+                console.log(res)
                 console.log('打开文档成功')
+                dataList:res.data.vedioListData
               },
             });
           },
